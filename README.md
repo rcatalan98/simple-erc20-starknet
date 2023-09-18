@@ -108,7 +108,17 @@ On Starknet, the deployment process is in two steps:
     ```
     Copy the declare Class Hash provided to use in the following step.
 3. Deploy:
+   When we deploy the contract we will be creating a new instance of the contract. Therefore the constructor will be called and we need to pass the correct arguments. In particular for our contract we need to specify who is going to receive the initial supply of tokens (the recipient) and the amount of tokens minted at first (initial supply).
    ```bash
-   make deploy CLASS_HASH="<CLASS_HASH>"
+   make deploy RECEPIENT=<ADDRESS_RECEIVE_INIT_SUPPLY> INIT_SUPPLY=<AMOUNT_TO_GIVE>"
    ```
+   Check the contract address provided by the deploy and copy it.
+5. Transfer your shitcoin:
+
+    To do a transfer of a ERC20 we need to create a transaction interacting with our already deployed contract. What we will be doing an `invoke` of the `transfer` external function from our     contract. To do so we need to provide the `recepient address` and the `amount of tokens` we want to transfer.
+   
+    ```bash
+    make transfer CONTRACT_ADDRESS=<DEPLOY_ADDRESS> TO=<RECEPIENT_ADDRESS> AMOUNT=<AMOUNT_TO_SEND>
+    ```
+
 
