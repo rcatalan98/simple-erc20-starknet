@@ -115,7 +115,7 @@ On Starknet, the deployment process is in two steps:
    Check the contract address provided by the deploy and copy it.
 5. Transfer your shitcoin:
 
-    To do a transfer of a ERC20 we need to create a transaction interacting with our already deployed contract. What we will be doing an `invoke` of the `transfer` external function from our     contract. To do so we need to provide the `recepient address` and the `amount of tokens` we want to transfer.
+    To do a transfer of a ERC20 we need to create a transaction interacting with our already deployed contract. What we will be doing an `invoke` of the `transfer` external function from our contract. To do so we need to provide the `recepient address` and the `amount of tokens` we want to transfer.
    
     ```bash
     make transfer CONTRACT_ADDRESS=<DEPLOY_ADDRESS> TO=<RECEPIENT_ADDRESS> AMOUNT=<AMOUNT_TO_SEND>
