@@ -8,8 +8,8 @@ mod MyToken {
 
     #[constructor]
     fn constructor(ref self: ContractState, initial_supply: u256, recipient: ContractAddress) {
-        let name = 'Shitcoin';
-        let symbol = 'SHIT';
+        let name = 'Pepecoin';
+        let symbol = 'PEPE';
 
         let mut unsafe_state = ERC20::unsafe_new_contract_state();
         ERC20::InternalImpl::initializer(ref unsafe_state, name, symbol);
